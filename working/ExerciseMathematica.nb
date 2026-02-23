@@ -1,0 +1,161 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Wolfram 14.3' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       154,          7]
+NotebookDataLength[      4674,        151]
+NotebookOptionsPosition[      3700,        127]
+NotebookOutlinePosition[      4094,        143]
+CellTagsIndexPosition[      4051,        140]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[TextData[{
+ "Q1: Find the first three roots of the Bessel function ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{
+     SubscriptBox["J", "1"], "(", "x", ")"}], "."}], TraditionalForm]],
+  ExpressionUUID->"09ca034b-f7e9-4614-8124-a55ba2875fa8"],
+ " \[LineSeparator]"
+}], "Text",
+ CellChangeTimes->{{3.974436710242367*^9, 3.9744367118252907`*^9}, {
+  3.974436810011654*^9, 
+  3.9744368151074953`*^9}},ExpressionUUID->"63b21263-e00a-493f-95ba-\
+38d991c31030"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"roots", "=", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"x", "/.", " ", 
+      RowBox[{"FindRoot", "[", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"BesselJ", "[", 
+          RowBox[{"1", ",", "x"}], "]"}], "==", "0"}], ",", 
+        RowBox[{"{", 
+         RowBox[{"x", ",", "#"}], "}"}]}], "]"}]}], "&"}], "/@", 
+    RowBox[{"{", 
+     RowBox[{"3", ",", "7", ",", "10"}], "}"}]}]}], "\n"}]], "Input",
+ CellChangeTimes->{
+  3.974436738620829*^9, {3.9744367983871803`*^9, 3.974436802390829*^9}},
+ CellLabel->
+  "In[147]:=",ExpressionUUID->"2b5af82d-ca2c-4fd6-a2dd-81c246fd86b1"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+  "3.831705970207511`", ",", "7.01558666981561`", ",", 
+   "10.173468135062722`"}], "}"}]], "Output",
+ CellChangeTimes->{{3.9744367998990517`*^9, 3.974436802948688*^9}},
+ CellLabel->
+  "Out[147]=",ExpressionUUID->"9b14f3cd-32df-4496-b104-23f455b8b084"]
+}, Open  ]],
+
+Cell[TextData[{
+ "Q2: Integrate the expression f(x) = sin(x) ",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["e", 
+    RowBox[{"-", "x"}]], TraditionalForm]],ExpressionUUID->
+  "e1ea686f-2e9b-4c87-ab35-6b33a4d5cf3d"],
+ ", and then take its derivative.\[LineSeparator]"
+}], "Text",
+ CellChangeTimes->{{3.974436823742778*^9, 
+  3.974436850346858*^9}},ExpressionUUID->"390d9e9a-b29c-4765-b0f4-\
+dfbe2d1a0be5"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"f", "[", "x_", "]"}], ":=", 
+  RowBox[{
+   RowBox[{"Sin", "[", "x", "]"}], " ", 
+   RowBox[{"Exp", "[", 
+    RowBox[{"-", "x"}], "]"}]}]}], "\n", 
+ RowBox[{
+  RowBox[{"F", "[", "x_", "]"}], "=", 
+  RowBox[{"Integrate", "[", 
+   RowBox[{
+    RowBox[{"f", "[", "x", "]"}], ",", "x"}], "]"}]}], "\n", 
+ RowBox[{
+  RowBox[{"D", "[", 
+   RowBox[{
+    RowBox[{"F", "[", "x", "]"}], ",", "x"}], "]"}], "//", 
+  "Simplify"}], "\n"}], "Input",
+ CellChangeTimes->{{3.974436835218066*^9, 3.974436859576928*^9}},
+ CellLabel->
+  "In[148]:=",ExpressionUUID->"7fb04063-79f1-4eb6-a283-e5b4a5608ab8"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"-", 
+   FractionBox["1", "2"]}], " ", 
+  SuperscriptBox["\[ExponentialE]", 
+   RowBox[{"-", "x"}]], " ", 
+  RowBox[{"(", 
+   RowBox[{
+    RowBox[{"Cos", "[", "x", "]"}], "+", 
+    RowBox[{"Sin", "[", "x", "]"}]}], ")"}]}]], "Output",
+ CellChangeTimes->{3.9744368668972473`*^9},
+ CellLabel->
+  "Out[149]=",ExpressionUUID->"77f68c64-0153-491b-bd8e-729d2c6f641e"],
+
+Cell[BoxData[
+ RowBox[{
+  SuperscriptBox["\[ExponentialE]", 
+   RowBox[{"-", "x"}]], " ", 
+  RowBox[{"Sin", "[", "x", "]"}]}]], "Output",
+ CellChangeTimes->{3.974436866898426*^9},
+ CellLabel->
+  "Out[150]=",ExpressionUUID->"d6f4adcd-4608-497e-a58c-48817ae08796"]
+}, Open  ]]
+},
+WindowSize->{Full, Full},
+WindowMargins->{{34, Automatic}, {18, Automatic}},
+FrontEndVersion->"14.3 for Mac OS X ARM (64-bit) (July 8, 2025)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"7a2a63e5-42e6-48a7-acc7-4cb2ea2143b4"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[554, 20, 468, 13, 55, "Text",ExpressionUUID->"63b21263-e00a-493f-95ba-38d991c31030"],
+Cell[CellGroupData[{
+Cell[1047, 37, 615, 18, 49, "Input",ExpressionUUID->"2b5af82d-ca2c-4fd6-a2dd-81c246fd86b1"],
+Cell[1665, 57, 292, 7, 33, "Output",ExpressionUUID->"9b14f3cd-32df-4496-b104-23f455b8b084"]
+}, Open  ]],
+Cell[1972, 67, 405, 11, 55, "Text",ExpressionUUID->"390d9e9a-b29c-4765-b0f4-dfbe2d1a0be5"],
+Cell[CellGroupData[{
+Cell[2402, 82, 619, 19, 90, "Input",ExpressionUUID->"7fb04063-79f1-4eb6-a283-e5b4a5608ab8"],
+Cell[3024, 103, 395, 12, 45, "Output",ExpressionUUID->"77f68c64-0153-491b-bd8e-729d2c6f641e"],
+Cell[3422, 117, 262, 7, 52, "Output",ExpressionUUID->"d6f4adcd-4608-497e-a58c-48817ae08796"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
+
